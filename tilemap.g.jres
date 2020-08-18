@@ -60,7 +60,7 @@
         "tilemapTile": true
     },
     "tile12": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "data": "hwQQABAAAAAABQAAAAAQABAPAAAAAPAFAAAARAQAAAAAAERVRQQAAABEVVRURQQAUEVVVFRURQRQRVVUVFRFBFBFVVRUVEUEUFVVVVRVVQRQVVVVVFVVBABVVVVVVQUAAABVVVUFAAAAAABVBQDwBfEAAAAAABAAUAAAABAPAAAAAAAAAAUAAA==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
@@ -71,6 +71,26 @@
     },
     "tile14": {
         "data": "hwQQABAAAAAAEBHBvLsLAAARERHBzLsAEBu8uxHBuwCwuxG8GxG7C7uxG7y7GxG8G7sbsRGxEbG7u7sbu7sbwbsRsbuxuxvMG8y8u7G7GwERvLsbsbu7sbG7uxuxuxuxEbG7u7u7G7wbsbu7sbsbCxC7sRuxuxELEBERERsbGwCwEbu7GxEBAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "tile15": {
+        "data": "hwQQABAAAAC/Zrbr7u7u7m9mu+7u7u5ub7br7u5u7u5vu+7u7u7u7m+7bu7u7u7uP7bubu7u7u5fs+vu7u7u7j9mu+7u7u7ub7vr7u5u7u6/tutu7u7ubm9su+7u7u7uz8S77u7u7u5vvOvu7u7u7r+26+7u7u7ub2a77ubu7u5vZrbr7u5u7g==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "tile16": {
+        "data": "hwQQABAAAADu7u7u7u7u7u7u7u7u/u7u7u7u7u7u/+7u7u7u7u7u7+7u///v7u7u7v7v7v/u7u7u7u7v7u7u7u7u/v7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u/u7u7u7v/v/u/u/+7u7v//7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7g==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "tile17": {
+        "data": "hwQQABAAAADu7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7n7u4Hfu7n7nfg7nAABwBnZ+DufgAAAGAAZ+4OAAAAAABw5w4AAAAAAHDubgAAAAAA7u7uAAAAAADu7u53BwAAAO7u7u4GBgAA7u7u7n4AAADubu7uDgAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "tile18": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAFIFAAAAAAAQ/w8AAAAAABBVBQAAIFUAAPAAAADx/wAAAAAAAFFVAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgVQAAAAAAAPH/AAAAAAAAUVUAAAAAAAAADwAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },

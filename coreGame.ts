@@ -234,9 +234,7 @@ function attemptJump () {
         canDoubleJump = false
     }
 }
-// controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-//     freezeLava()
-// })
+
 
 function animateIdle () {
     mainIdleLeft = animation.createAnimation(ActionKind.IdleLeft, 100)
@@ -305,16 +303,16 @@ function setLevelTileMap (level: number) {
             2 2 . . . . . . . 2
         `, [myTiles.transparency16,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile6,sprites.dungeon.hazardLava1,myTiles.tile14,myTiles.tile5], TileScale.Sixteen))
     } else if (level == 2) {
-        tiles.setTilemap(tiles.createTilemap(hex`2000080000000000000000000000000000000000000000060000000000000000060606060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020202020202000000000000000000000000000000000000000000000000020002060303030000000000000000000000000000030303000000000002000002000200030303000000000000000000000000000003030300040002000200000000020003030300000000000000000005000000000303030101010201020101010102010101010101010101010101010101010101010101`, img`
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . 2 2 2 2 2 2 . . . . . . . . . . . . . . . . 
-            . . . . . . . . 2 . 2 . . . . . . . . . . . . . . . . . . . . . 
-            . . . . . 2 . . 2 . 2 . . . . . . . . . . . . . . . . . . . . . 
-            . . . 2 . 2 . . . . 2 . . . . . . . . . . . . . . . . . . . . . 
-            2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-            `, [myTiles.transparency16,myTiles.tile2,myTiles.tile3,myTiles.tile5,myTiles.tile6,myTiles.tile1,myTiles.tile7], TileScale.Sixteen))
+        tiles.setTilemap(tiles.createTilemap(hex`0a0008000405050505050505000004050500000006020000040005000000000000000400020006000000000004000000000000000000040000000000000000000401000000020000060003030303030303030303`, img`
+            2 2 2 2 2 2 2 2 . .
+            2 2 2 . . . . . . .
+            2 . 2 . . . . . . .
+            2 . . . . . . . . .
+            2 . . . . . . . . .
+            2 . . . . . . . . .
+            2 . . . . . . . . .
+            2 2 2 2 2 2 2 2 2 2
+        `, [myTiles.transparency16,myTiles.tile6,myTiles.tile12,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18], TileScale.Sixteen))
     } else if (level == 3) {
         tiles.setTilemap(tiles.createTilemap(hex`2000080000000000000000000000000300000007000000070000070007000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000300000003000000000000000000000000000000000000000000000000000300030000000000000000000000000000000000000000000000000000000303030303030303030303030303030303030303030303030303030300000000030000050000050005000005000500000500050000000500000005000000060303010000040004000000040000000000040000000400000004000000030202020302020202020202020202020202020202020202020202020202020203`, img`
             . . . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . . . 
@@ -771,28 +769,28 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Flier, function (sprite, otherSp
 
 function createEnemies () {
     // enemy that moves back and forth
-    for (let value5 of tiles.getTilesByType(myTiles.tile4)) {
+    for (let value5 of tiles.getTilesByType(myTiles.tile18)) {
         bumper = sprites.create(img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . f f f f f f . . . . . . 
-            . . . f 7 2 7 7 7 2 f . . . . . 
-            . . f 7 7 7 2 7 2 7 7 f . . . . 
-            . . f 7 7 7 7 7 7 7 7 7 f . . . 
-            . f 7 7 7 2 7 7 7 2 7 7 f . . . 
-            . f 7 7 7 2 7 7 7 2 7 7 7 f . . 
-            . f 7 7 7 7 7 7 7 7 7 7 7 7 f . 
-            . f 7 7 7 7 2 2 2 7 7 7 7 7 f . 
-            . . f 7 7 2 2 7 2 2 7 7 7 7 f . 
-            . . f 7 7 2 7 7 7 2 2 7 7 7 f . 
-            . . . f 7 7 7 7 7 7 7 7 7 7 f . 
-            . . . . f f 7 7 7 7 7 7 7 f . . 
-            . . . . . . f f f f f f f . . . 
-            . . . . . . . . . . . . . . . . 
-            `, SpriteKind.Bumper)
+            . . . . . . . . . . . . . . . .
+            . . . 1 1 . . . . . . . . . . .
+            . . 2 f 5 . . . . . . . . . . .
+            . . 5 f 5 f . . . . . . . . . .
+            . . 5 f 5 . . . . . . . . 1 1 .
+            . . . . . . . . . . . . 2 f 5 .
+            . . . . . . . . . . . . 5 f 5 f
+            . . . . . . . . . . . . 5 f 5 .
+            . . . . . . . . . . . . . . . .
+            . . . . . 1 1 . . . . . . . . .
+            . . . . 2 f 5 . . . . . . . . .
+            . . . . 5 f 5 f . . . . . . . .
+            . . . . 5 f 5 . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+        `, SpriteKind.Bumper)
         tiles.placeOnTile(bumper, value5)
         tiles.setTileAt(value5, myTiles.transparency16)
-        bumper.ay = gravity
+        //bumper.ay = gravity
         if (Math.percentChance(50)) {
             bumper.vx = Math.randomRange(30, 60)
         } else {
@@ -1181,4 +1179,3 @@ game.onUpdate(function () {
     }
 })
 
-////////////////////////////////////////////////////////
