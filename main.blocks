@@ -1,0 +1,77 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="ruf?fco4F_1ueUIc=2CC">Snow</variable><variable type="KIND_SpriteKind" id="z$C..a0^xbB@MFKWEDJ3">Player</variable><variable type="KIND_SpriteKind" id="1srHqfw6`-;{=_-j?l)y">Projectile</variable><variable type="KIND_SpriteKind" id="=3l0w4AJxNXkTdJGXIq;">Food</variable><variable type="KIND_SpriteKind" id="oarQ[sv/?~4@-#QSI][P">Enemy</variable><variable id="cV:`vXuAG/A[giI|8?o6">value2</variable><variable id=":5`8M.nDfZNPK$#h[U^r">snowFlake</variable><variable id="g;IV*grqB/Gm$N?{jp)B">projectile</variable><variable id="5@Z~m$I1nrn8?=R#+4N*">mySprite</variable><variable id="}jt]+/usC;nO{[ep6j5J">projectile2</variable><variable id="Xj{^%(O{Qg#kw#5l5Ec7">stormCloud</variable><variable id="EGFFR51YZKrz3TA%2?~)">snowPower</variable><variable id="5KD4E#?a$ebYMlpCOl8c">value</variable><variable id="SBb1?v6?b;Vcdj*z3+|R">list</variable></variables><block type="function_definition" id="MwewKrErtZmtGUu_WCbL" x="0" y="0"><mutation name="pickLock" functionid="|AKTr82Zgr7P/r9(DVB7"/><field name="function_name">pickLock</field><comment>add to puzzle blocks</comment><statement name="STACK"><block type="mapsetwallat" id="[{?T9=5EAue/9]?:~s1D"><value name="on"><shadow type="toggleOnOff" id="i}U:YN8YjR[=KAtcM$rc"><field name="on">false</field></shadow></value><value name="loc"><shadow type="mapgettile" id="l0~^#4GKUASEu+^v(LN-"><value name="col"><shadow type="math_number" id=".!e+}6!:Z0`PAz%o:Y=:"><field name="NUM">6</field></shadow></value><value name="row"><shadow type="math_number" id="T30}v;1WuzCssv3Ev/Y9"><field name="NUM">6</field></shadow></value></shadow></value></block></statement></block><block type="keyonevent" id=":SpD1t~+_e]Ne5ceuMoo" x="990" y="10"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field><comment>game function
+function freezeLava () {
+let mySprite: Sprite = null
+projectile = sprites.createProjectileFromSprite(img`
+6 6 . . . . . . . . . . . . . .
+6 9 9 9 . . . . . . . . . . . .
+. 9 9 6 . . . . . . . . . . . .
+. 9 6 6 9 9 c c . . . . . . . .
+. . . 9 9 9 9 c 6 . . . . . . .
+. . . 9 9 9 9 9 6 6 . . . . . .
+. . . 9 6 6 6 6 9 6 9 9 . . . .
+. . . 6 6 6 9 9 9 6 9 c c . . .
+. . . . c 9 6 9 9 9 6 6 6 . . .
+. . . . . 9 6 9 6 6 6 6 9 9 . .
+. . . . . . 6 6 9 9 9 9 9 9 . .
+. . . . . . 6 6 c 9 9 9 9 6 6 6
+. . . . . . . 6 c c 9 9 6 6 9 6
+. . . . . . . . c 9 9 6 6 9 9 6
+. . . . . . . . . . 6 6 9 9 9 6
+. . . . . . . . . . 6 6 6 6 6 6
+`, mySprite, 50, 50)
+}</comment><statement name="HANDLER"><block type="function_call" id="~3Yv!W=WK4[BcU;D)p@8"><mutation name="pickLock" functionid="|AKTr82Zgr7P/r9(DVB7"/></block></statement></block><block type="function_definition" id="=QgXH,8WK2~XILyp^C4Q" x="10" y="230"><mutation name="snowing" functionid="Gtx3Y2CsW~;G]kUgVu`*"/><field name="function_name">snowing</field><statement name="STACK"><block type="pxt_controls_for_of" id="3FrfC^=IZ_S_(!Jhh,83"><value name="VAR"><shadow type="variables_get_reporter" id="6gD:Zp,r`31?{kv=QS,)"><field name="VAR" id="cV:`vXuAG/A[giI|8?o6">value2</field></shadow></value><value name="LIST"><block type="mapgettilestype" id="k|qu6k*8811+b,=+3e(w"><value name="tile"><shadow type="tileset_tile_picker" id="SBQ|jf|PsG0oD5;cc|H|"><field name="tile">myTiles.tile14</field></shadow></value></block></value><statement name="DO"><block type="variables_set" id=":A}SKD0U3]_zF8Z[oc0V"><field name="VAR" id="Xj{^%(O{Qg#kw#5l5Ec7">stormCloud</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="06-cxf!i0$2e^`;E*Bx|"><value name="img"><shadow type="screen_image_picker" id="*/sF%*}a:3#M{3V^f-L7"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . 8 . . . . 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . 8 . . . . . . . . . . . . 
+. . . 8 . . . . . . . 8 . . . . 
+. . . 8 8 . . . . . 8 8 . . . . 
+. . . . 8 8 8 . . . 8 . . . . . 
+. . . . . . 8 8 8 8 . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="gjJvscWrGa*.GhXSfG1)"><field name="MEMBER">Snow</field></shadow></value></block></value><next><block type="mapplaceontile" id="rt$9.LysbH7:BN2z-1S%"><value name="sprite"><shadow type="variables_get" id="p:]*Q+BxKqLOp(XDXQ^l"><field name="VAR" id="Xj{^%(O{Qg#kw#5l5Ec7">stormCloud</field></shadow></value><value name="loc"><shadow type="mapgettile"/><block type="variables_get" id="J=~$Uqad%rHoxGs~H`@_"><field name="VAR" id="cV:`vXuAG/A[giI|8?o6">value2</field></block></value><next><block type="mapsettileat" id=";4sA`n;-p:kbCVI.3;6["><value name="tile"><shadow type="tileset_tile_picker" id="]%WEQt)n9(4`.qDB2F@~"><field name="tile">myTiles.tile14</field></shadow></value><value name="loc"><shadow type="mapgettile"/><block type="variables_get" id="7?bX3Y:77ezaL%zFWoxl"><field name="VAR" id="cV:`vXuAG/A[giI|8?o6">value2</field></block></value><next><block type="variables_set" id="{{cILp+HW/tG|M1?au;k"><field name="VAR" id="}jt]+/usC;nO{[ep6j5J">projectile2</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreateprojectilefromsprite" id="3|6?5uJYSN$KF3jmH.tw"><value name="img"><shadow type="screen_image_picker" id="GDrIyy8}nX;GsQ/|,8Y."><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . 1 . . . . . . . . . . 1 . 
+. . . . . . . . . 1 . . . . . . 
+. . . . . . . . . . . . . . . . 
+. 1 . . . . . . . . . . . . . . 
+. . . . d . 1 . . . . . . . . . 
+. . . . . . . . . . . d . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . 1 . . . . . . . . 1 . . 
+. . . . . . . . . . 1 . . . . . 
+. . . . . . . . . . . . . . . . 
+. d . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 1 . . . . . . . . 
+. . . . . . . . . . . . . d . . 
+`</field></shadow></value><value name="sprite"><block type="variables_get" id="C535O+h,^6/r4Qr7[K%z"><field name="VAR" id="Xj{^%(O{Qg#kw#5l5Ec7">stormCloud</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="=w{eBWzsAX;BzF@iR6xp"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="*ajrv/OP})}Tt@POl_*="><field name="speed">50</field></shadow></value></block></value></block></next></block></next></block></next></block></statement></block></statement></block><block type="keyonevent" id="(5Larn%O{CwAff~Krs|d" x="1010" y="250"><field name="button">controller.B</field><field name="event">ControllerButtonEvent.Pressed</field><comment>game function
+function freezeLava () {
+let mySprite: Sprite = null
+projectile = sprites.createProjectileFromSprite(img`
+6 6 . . . . . . . . . . . . . .
+6 9 9 9 . . . . . . . . . . . .
+. 9 9 6 . . . . . . . . . . . .
+. 9 6 6 9 9 c c . . . . . . . .
+. . . 9 9 9 9 c 6 . . . . . . .
+. . . 9 9 9 9 9 6 6 . . . . . .
+. . . 9 6 6 6 6 9 6 9 9 . . . .
+. . . 6 6 6 9 9 9 6 9 c c . . .
+. . . . c 9 6 9 9 9 6 6 6 . . .
+. . . . . 9 6 9 6 6 6 6 9 9 . .
+. . . . . . 6 6 9 9 9 9 9 9 . .
+. . . . . . 6 6 c 9 9 9 9 6 6 6
+. . . . . . . 6 c c 9 9 6 6 9 6
+. . . . . . . . c 9 9 6 6 9 9 6
+. . . . . . . . . . 6 6 9 9 9 6
+. . . . . . . . . . 6 6 6 6 6 6
+`, mySprite, 50, 50)
+}</comment><statement name="HANDLER"><block type="function_call" id="vXs,Qjb2MmZ^Yys`:Nb/"><mutation name="snowing" functionid="Gtx3Y2CsW~;G]kUgVu`*"/></block></statement></block></xml>
