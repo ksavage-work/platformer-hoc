@@ -292,7 +292,7 @@ function setLevelTileMap (level: number) {
             2 2 2 2 2 2 2 2 2 2
         `, [myTiles.transparency16,myTiles.tile2,myTiles.tile3,myTiles.tile6,myTiles.tile1,myTiles.tile10,myTiles.tile5], TileScale.Sixteen))
     } else if (level == 1) {
-        tiles.setTilemap(tiles.createTilemap(hex`0a0008000000000000000000000000000606060606060600000000000000000000000000000000000000000000000000000000000000030007070707070707000304000000000000000103020505050505050502`, img`
+        tiles.setTilemap(tiles.createTilemap(hex`0a0008000000000000000000000000000404040404040400000000000000000000000000000000000000000000000000000000000000070005050505050505000702000000000000000107060303030303030306`, img`
             . . . . . . . . . .
             . . . . . . . . . .
             . . . . . . . . . .
@@ -301,7 +301,7 @@ function setLevelTileMap (level: number) {
             2 . . . . . . . . .
             2 . . . . . . . . .
             2 2 . . . . . . . 2
-        `, [myTiles.transparency16,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile6,sprites.dungeon.hazardLava1,myTiles.tile14,myTiles.tile5], TileScale.Sixteen))
+        `, [myTiles.transparency16,myTiles.tile1,myTiles.tile6,sprites.dungeon.hazardLava1,myTiles.tile14,myTiles.tile5,myTiles.tile13,myTiles.tile22], TileScale.Sixteen))
     } else if (level == 2) {
         tiles.setTilemap(tiles.createTilemap(hex`0a0008000405050505050505000004050500000006020000040005000000000000000400020006000000000004000000000000000000040000000000000000000401000000070000060803030303030303030303`, img`
             2 2 2 2 2 2 2 2 . .
@@ -905,9 +905,8 @@ function spawnGoals () {
 }
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Lava, function (sprite, otherSprite) {
     sprite.startEffect(effects.blizzard, 1000)
-    otherSprite.destroy()
     sprite.destroy()
-
+    otherSprite.destroy()
     for (let index = 0; index <= 6; index++) {
             tiles.setTileAt(tiles.getTileLocation(index + 2, 7), img`
                 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -930,6 +929,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Lava, function (sprite, othe
             tiles.setWallAt(tiles.getTileLocation(index + 2, 7), true)
         }
 })
+
 let heroFacingLeft = false
 let coin: Sprite = null
 let playerStartLocation: tiles.Location = null
