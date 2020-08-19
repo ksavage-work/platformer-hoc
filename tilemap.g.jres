@@ -94,6 +94,16 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
+    "tile19": {
+        "data": "hwQQABAAAAAAAAAAALsAAAAAAACw6w4AAAAAALDu7gAAAAAAsL4LAAAAAADQu7sAAAAAANCwCwAAAAAA0A0AAAAAAAAADQAAAAAAAADdDdAAAAAAAADd3QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "tile20": {
+        "data": "hwQQABAAAAAAAJAACQAAAAAAAAAAAAAAAAkJCQAAAAAAAAAAAAAAAACQAAAAAAAAAACQIAAAAAAAAAAiAgAAAAAAAAAiAAAAAAAAACIiAAAAAAAAICIiAgAAICIiIiICAAACAJAiIgIAAAIAkCIiAgAAIACQIiICAAAAIiIiIgIAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
