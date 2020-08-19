@@ -1,55 +1,55 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="*!.D{vO$Lt?L!$P.Nl(p">Snow</variable><variable type="KIND_SpriteKind" id="-e(10GI7EuELhDb^o/Qp">Wcan</variable><variable type="KIND_SpriteKind" id="f7wQgdE:mXE3?Mo_Xr_{">Player</variable><variable type="KIND_SpriteKind" id=".5]%xOQdPL[L_5Swl{sW">Projectile</variable><variable type="KIND_SpriteKind" id="1gxTz:Vi);]kit*?om0=">Food</variable><variable type="KIND_SpriteKind" id="#2_gLYl%)B5d$s5SZObB">Enemy</variable><variable id="N8rV0r1%piFD7VuA/mc.">projectile2</variable><variable id="[.%cm6WpQ-D4w:S0xJ+p">mySprite</variable><variable id="G8z:.SR@rUn*vJy6Tez9">wateringCan</variable><variable id="q/h_(oiD!1N*wqv!UX5!">waterDroplet</variable><variable id="[=Wocty/tr9QY#mq)noZ">value2</variable><variable id="q`^W`Pj2-fGYY~Ohk=.9">stormCloud</variable><variable id="Vf%,2]xT8+DPOaEanYPA">index</variable></variables><block type="keyonevent" id="OA:L-m{a#In|bhht;bM*" x="20" y="20"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="function_call" id="_p,=jgMW-.PIhSnjeo,2"><mutation name="pickLock" functionid="tw73cz+BfO[LC,6]p]*W"/></block></statement></block><block type="function_definition" id="#(e9NydN^xAVIHBJ8hm[" x="318" y="20"><mutation name="pickLock" functionid="tw73cz+BfO[LC,6]p]*W"/><field name="function_name">pickLock</field><comment pinned="false" h="80" w="160" relx="10" rely="10">add to puzzle</comment><statement name="STACK"><block type="mapsetwallat" id="`t]e#x/O|h9#U`*yp%Ej"><value name="on"><shadow type="toggleOnOff" id="SwFWRZr49V(l3^^[ug6z"><field name="on">false</field></shadow></value><value name="loc"><shadow type="mapgettile" id="t=%t=QFC:4eOS;7ky!ZP"><value name="col"><shadow type="math_number" id="[~3Gx3/$iT8=|ce60ZOX"><field name="NUM">6</field></shadow></value><value name="row"><shadow type="math_number" id="_DUjvwka%!Q8v9lr@*O5"><field name="NUM">6</field></shadow></value></shadow></value></block></statement></block><block type="function_definition" id="SSk3u_WL$h$DKP79XVtp" x="895" y="20"><mutation name="snowing" functionid="nF-%@:6v{G!_,5ms@JHI"/><field name="function_name">snowing</field><comment pinned="false" h="80" w="160" relx="10" rely="10">add to puzzle</comment><statement name="STACK"><block type="variables_set" id="+AckKnnPRyJ+l/Y47wxz"><field name="VAR" id="N8rV0r1%piFD7VuA/mc.">projectile2</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="J!gpH?@%p_qH*K+,26OO"><value name="img"><shadow type="screen_image_picker" id="?h7h.rEb{~lWPJHYR[%l"><field name="img">img`
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="DJZB`nBo8)8yuxy;h=WW">Snow</variable><variable type="KIND_SpriteKind" id="jk(8gp(#KxmA5YFJK.-A">Wcan</variable><variable type="KIND_SpriteKind" id="#`oge}g_d/bz8+W;V}^,">Player</variable><variable type="KIND_SpriteKind" id="f]_##s`Q23F6Qi8i/[h4">Projectile</variable><variable type="KIND_SpriteKind" id="tbUV6?xfDq~Fx(.U]=-]">Food</variable><variable type="KIND_SpriteKind" id="|*}JAaZ~bo8dLB$XEKdf">Enemy</variable><variable id=",*^g$@OkCr2*wJhbXIbo">value2</variable><variable id="=gG!b@_:a?)%mvbjgZU$">stormCloud</variable><variable id="vQXanCkCE`neTiW#cRY?">projectile2</variable><variable id="2pvmSF`USV]RcHW11v4#">value22</variable><variable id="$g}2/mxi1/b^fQq;5-u4">wateringCan</variable><variable id="f;lIczV.JA%x4_3i7z!J">mySprite</variable></variables><block type="function_definition" id="eaS06Cp~#o-!X_j8:iV}" x="810" y="0"><mutation name="pickLock" functionid="YCz|#tLQJ?pnenFaSt[R"/><field name="function_name">pickLock</field><comment pinned="false" h="80" w="160" relx="10" rely="10">add to puzzle</comment><statement name="STACK"><block type="pxt_controls_for_of" id=";2Q%]QO?rq81Pw#O_n[V"><value name="VAR"><shadow type="variables_get_reporter" id="-TGVn7?m$vC[^7j+_On3"><field name="VAR" id=",*^g$@OkCr2*wJhbXIbo">value2</field></shadow></value><value name="LIST"><block type="mapgettilestype" id="#,b;(o}pRusSnD0IW_`6"><value name="tile"><shadow type="tileset_tile_picker" id="6,~EVb2d2%sxNABIxcf,"><field name="tile">myTiles.tile10</field></shadow></value></block></value><statement name="DO"><block type="mapsetwallat" id="t`2kC,OCWh#G:g(/dM]1"><value name="on"><shadow type="toggleOnOff" id="rQ_@C(:LK+xkZmhW#Mt/"><field name="on">false</field></shadow></value><value name="loc"><shadow type="mapgettile" id="DA_[/a-ROAxH[jOEXHCl"><value name="col"><shadow type="math_number" id="E_)0}k5T|ICN4]=#An3{"><field name="NUM">6</field></shadow></value><value name="row"><shadow type="math_number" id="l36-w.pa4DVztCB%2sSI"><field name="NUM">6</field></shadow></value></shadow><block type="variables_get" id=":#5B$ARK!VZV.nEV3EGU"><field name="VAR" id=",*^g$@OkCr2*wJhbXIbo">value2</field></block></value><next><block type="mapsettileat" id="*`9L=bGTMrv:%qB[%F{("><value name="tile"><shadow type="tileset_tile_picker" id="qQS~cT3#SMwr(15X:42-"><field name="tile">myTiles.transparency16</field></shadow></value><value name="loc"><shadow type="mapgettile" id="ZasfO_OElc}UHoK=WBuj"><value name="col"><shadow type="math_number" id="U3TM0%X49X~~svzI$a-2"><field name="NUM">0</field></shadow></value><value name="row"><shadow type="math_number" id="z}JIi@X11A2fd^pCYza5"><field name="NUM">0</field></shadow></value></shadow><block type="variables_get" id="k~}!LNSn_pa2pxeJ(|OO"><field name="VAR" id=",*^g$@OkCr2*wJhbXIbo">value2</field></block></value></block></next></block></statement></block></statement></block><block type="keyonevent" id="o8P|9^R1XJYn+kcG9F3B" x="1530" y="40"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="function_call" id="lxrw`v)juw`TS%Q,OTzp"><mutation name="pickLock" functionid="YCz|#tLQJ?pnenFaSt[R"/></block></statement></block><block type="function_definition" id="z[KG(9pvhS3gxXYePO~z" x="810" y="350"><mutation name="snowing" functionid="!L]h-aWem}/8Q4u[Q;Iu"/><field name="function_name">snowing</field><comment pinned="false" h="80" w="160" relx="10" rely="10">add to puzzle</comment><statement name="STACK"><block type="variables_set" id="r_W`kTXbk+._3H.,Xp8$"><field name="VAR" id="vQXanCkCE`neTiW#cRY?">projectile2</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="xmR1cC!Rzt-7,WU}_CPm"><value name="img"><shadow type="screen_image_picker" id="3BwcMU#0OL*nz[iAJUV]"><field name="img">img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-. . 1 1 . . . . . . 1 1 . . . . 
-. . 1 1 . . . . . . 1 1 . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . 1 1 . 
-. . . . 1 1 . . . . . . . 1 1 . 
-. . . . 1 1 . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . 1 1 . . . . . . . 
-. . . . . . . 1 1 . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. 1 1 . . . . . . . . . . . . . 
-. 1 1 . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`</field></shadow></value><value name="kind"><shadow type="spritekind" id="i3,h|@galcv*(8N-D#_s"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="mapplaceontile" id="7hDANKTkUj=*yv-Q$[5k"><value name="sprite"><shadow type="variables_get" id="%%RBWaQm?l[*ydLwlou_"><field name="VAR" id="N8rV0r1%piFD7VuA/mc.">projectile2</field></shadow></value><value name="loc"><shadow type="mapgettile" id="Qzef!6r*I:WU(2Vu(`!w"><value name="col"><block type="device_random" id="7sQ{6lVHE3S144mPaK~H"><value name="min"><shadow type="math_number" id="RttO:w`x}bkDoeOayZxV"><field name="NUM">2</field></shadow></value><value name="limit"><shadow type="math_number" id="sjDiv`o!H)idDeROXY6`"><field name="NUM">8</field></shadow></value></block></value><value name="row"><shadow type="math_number" id="B1mcPMk1JT4l,)~BRR.p"><field name="NUM">1</field></shadow></value></shadow></value><next><block type="spritesetvel" id="nhBW|HAU2?h[T1vC4c%P"><value name="sprite"><block type="variables_get" id="qb~A?IW!GnBlk[7q+JSD"><field name="VAR" id="N8rV0r1%piFD7VuA/mc.">projectile2</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="(^KZ{N,aJ+mli^eYa;#I"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="CcIO0m7?4%V;,rl|f6-v"><field name="speed">50</field></shadow></value></block></next></block></next></block></statement></block><block type="keyonevent" id="YCm)lB9*/rJ:S_daHc.}" x="1749" y="20"><field name="button">controller.B</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="function_call" id="%C|XV$=+nGYCcxI|d23+"><mutation name="snowing" functionid="nF-%@:6v{G!_,5ms@JHI"/></block></statement></block><block type="pxt_controls_for_of" id="~Lde6+P`,ZoZkKLNoU|d" disabled="true" x="20" y="345"><value name="VAR"><shadow type="variables_get_reporter" id="C^~~-v^i_]]YLUDVlGOe" disabled="true"><field name="VAR" id="[=Wocty/tr9QY#mq)noZ">value2</field></shadow></value><value name="LIST"><block type="mapgettilestype" id="M6R%.ATTtN%c:`2nQcOh" disabled="true"><value name="tile"><shadow type="tileset_tile_picker" id="?^f$r4MHo=)fh4s~9[j5" disabled="true"><field name="tile">myTiles.tile14</field></shadow></value></block></value><statement name="DO"><block type="variables_set" id="5wHAdaPSRtBi3~,x6WZr" disabled="true"><field name="VAR" id="q`^W`Pj2-fGYY~Ohk=.9">stormCloud</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="z;;H9?4RDra`3GxabL;u" disabled="true"><value name="img"><shadow type="screen_image_picker" id="]mxitM-%.upB~d7tp{3h" disabled="true"><field name="img">img`
+. . 1 1 1 1 1 1 . . . . . . . . 
+. . . . . . . . 1 1 . . . . . . 
+. . . . . . . . . . 1 1 1 . . . 
+. . . . . . . . . . . . 1 . . . 
+. . . . . . . . . . . . 1 . . . 
+. . . . . . 1 1 1 1 1 1 1 . . . 
+. . . . . . 1 . . . 1 1 1 . . . 
+. . . . . . 1 . . . . . 1 . . . 
+. . . . . . 1 1 1 1 1 1 1 . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`</field></shadow></value><value name="kind"><shadow type="spritekind" id="}$T,!$h-G#?rtpT[O,9p" disabled="true"><field name="MEMBER">Snow</field></shadow></value></block></value><next><block type="mapplaceontile" id="_8;l#zZ!nefr@cecRO.L" disabled="true"><value name="sprite"><shadow type="variables_get" id=":.h:rOYOV^hlc#ik9m}1" disabled="true"><field name="VAR" id="q`^W`Pj2-fGYY~Ohk=.9">stormCloud</field></shadow></value><value name="loc"><shadow type="mapgettile"/><block type="variables_get" id="r$wkYUT|#1)F;3N`$t,|" disabled="true"><field name="VAR" id="[=Wocty/tr9QY#mq)noZ">value2</field></block></value><next><block type="mapsettileat" id="1}vQ#(pEN?Alr1~ASELt" disabled="true"><value name="tile"><shadow type="tileset_tile_picker" id="^.CYR(5u50dRXJE0/i!{" disabled="true"><field name="tile">myTiles.tile14</field></shadow></value><value name="loc"><shadow type="mapgettile"/><block type="variables_get" id="-;}~)dFkGA%@!awu?fE6" disabled="true"><field name="VAR" id="[=Wocty/tr9QY#mq)noZ">value2</field></block></value><next><block type="variables_set" id="Rn*)s,^{e%*m-EA9aVNq" disabled="true"><field name="VAR" id="N8rV0r1%piFD7VuA/mc.">projectile2</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreateprojectilefromsprite" id="rF;*NJ|EBpH{f_8/zkY`" disabled="true"><value name="img"><shadow type="screen_image_picker" id="/~_BPlCzL!{S/=iI:0R8" disabled="true"><field name="img">img`
+`</field></shadow><block type="screen_image_picker" id="#68|81-blPn73j2:1M5@"><field name="img">img`
 . . . . . . . . . . . . . . . . 
 . . . 1 . . . . . . . . . . 1 . 
-. . . . . . . . . 1 . . . . . . 
-. . . . . . . . . . . . . . . . 
-. 1 . . . . . . . . . . . . . . 
+. . . . . . . . 1 1 . . . . . . 
+. 1 1 . . . . . 1 1 . . . . . . 
+. 1 1 . . . . . . . . . . . . . 
 . . . . d . 1 . . . . . . . . . 
 . . . . . . . . . . . d . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . 1 . . . . . . . . 1 . . 
-. . . . . . . . . . 1 . . . . . 
-. . . . . . . . . . . . . . . . 
+. . . . . . . . . 1 1 . . . . . 
+. . . . . . . . . 1 1 . . . . . 
 . d . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . 1 . . . . . . . . 
+. . . . . . 1 1 . . . . . . . . 
+. . . . . . 1 1 . . . . . . . . 
 . . . . . . . . . . . . . d . . 
-`</field></shadow></value><value name="sprite"><shadow type="variables_get" id="}+;}d0#5S2IU!G:8Et[{" disabled="true"><field name="VAR" id="q`^W`Pj2-fGYY~Ohk=.9">stormCloud</field></shadow></value><value name="vx"><shadow type="spriteSpeedPicker" id="{jaU-oeJ|.!{s@fzDjTn" disabled="true"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="XBc$E)7!u6k}|CBcZ-,v" disabled="true"><field name="speed">50</field></shadow></value></block></value></block></next></block></next></block></next></block></statement></block><block type="math_arithmetic" id="]qFGRfg82_[{ZpjWT]H." disabled="true" x="933" y="345"><field name="OP">ADD</field><value name="A"><shadow type="math_number" id=",gaO@^+I$YX`LbswuX4@" disabled="true"><field name="NUM">2</field></shadow></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="Y0;VH77X=}jEn`jy9~3}" disabled="true"><field name="VAR" id="Vf%,2]xT8+DPOaEanYPA">index</field></block></value></block><block type="pxt_controls_for" id="EPs$^|3gXTW|q?+kn2.9" disabled="true" x="1175" y="345"><value name="VAR"><shadow type="variables_get_reporter" id="aNdorZ|vr-MbpLuo=WI)" disabled="true"><field name="VAR" id="Vf%,2]xT8+DPOaEanYPA">index</field></shadow></value><value name="TO"><shadow type="math_whole_number" id="qVl/s%ygp*C`(IIS0Px~" disabled="true"><field name="NUM">6</field></shadow></value></block><block type="function_definition" id="~im9*zBhg4GJZq-@H:Xy" x="1479" y="345"><mutation name="getWateringCan" functionid="w6Pac~*N^CLidC3,g[VO"/><field name="function_name">getWateringCan</field><statement name="STACK"><block type="pxt_controls_for_of" id="g/eVchxNR(pxjR}V1Y-m"><value name="VAR"><shadow type="variables_get_reporter" id="WSa#K.InItyIy=YtY9ND"><field name="VAR" id="[=Wocty/tr9QY#mq)noZ">value2</field></shadow></value><value name="LIST"><block type="mapgettilestype" id="6wif22F|dBb`md[?`T?^"><value name="tile"><shadow type="tileset_tile_picker" id="y-*YgHUk50[mb(0mb,lp"><field name="tile">myTiles.tile20</field></shadow></value></block></value><statement name="DO"><block type="variables_set" id="4},|cAqIwG6S.rz.zRx%"><field name="VAR" id="G8z:.SR@rUn*vJy6Tez9">wateringCan</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="vl1x_zoyxMbw};Sq7-Od"><value name="img"><shadow type="screen_image_picker" id="}cK|bVsIg|YsWv91^o2J"><field name="img">img`
+`</field></block></value><value name="kind"><shadow type="spritekind" id="3$jh}|mmUq%WuFsYIZyD"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="mapplaceonrandomtile" id="%OS7|?t)fPISku$b:a_G"><value name="sprite"><block type="variables_get" id="W@i7(Y{wgzY!pCON`XV~"><field name="VAR" id="vQXanCkCE`neTiW#cRY?">projectile2</field></block></value><value name="tile"><shadow type="tileset_tile_picker" id="mp,,=,Zm#AxLVeqBX/hQ"><field name="tile">myTiles.tile14</field></shadow></value><next><block type="spritesetvel" id="Anl_4+BpH=,h0N4prhRf"><value name="sprite"><block type="variables_get" id="]_`y5V5Rd(k^5vWlZX|w"><field name="VAR" id="vQXanCkCE`neTiW#cRY?">projectile2</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="[.mJ@k*54Bq/9@dW6Z~m"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="Xw?^eslik=sZ1WxMKIxI"><field name="speed">50</field></shadow></value></block></next></block></next></block></statement></block><block type="keyonevent" id="5=}G2F_DHb!$Z(L[.lG(" x="1530" y="370"><field name="button">controller.B</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="function_call" id="mJ^P^},3miRAGf4(uT}*"><mutation name="snowing" functionid="!L]h-aWem}/8Q4u[Q;Iu"/></block></statement></block><block type="variables_set" id="Y{C9`p8*dcP#|skZ@bD_" disabled="true" x="0" y="470"><field name="VAR" id="vQXanCkCE`neTiW#cRY?">projectile2</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="0+yd3Z.*2H7-Pjw0gC)}" disabled="true"><value name="img"><shadow type="screen_image_picker" id="^7zQq/..iXX[2MdcjtYK" disabled="true"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. 1 1 . . . . . . . . . . . . . 
+. 1 1 . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 1 1 . . . . . . . 
+. . . . . . . 1 1 . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . 1 1 . . . . . . . . . . . 
+. . . 1 1 . . . . . . . . . . . 
+. . . . . . . . . . . 1 1 . . . 
+. . . . . . . . . . . 1 1 . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. 1 1 . . . . . . . . . . . . . 
+. 1 1 . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="FpK[r[oRm9YDn~*#:Zu?" disabled="true"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="mapplaceonrandomtile" id="/TeT6eo~v=q@1z8m,s{|" disabled="true"><value name="sprite"><block type="variables_get" id="C/gJ2;gO0yObPs;^7Jd[" disabled="true"><field name="VAR" id="vQXanCkCE`neTiW#cRY?">projectile2</field></block></value><value name="tile"><shadow type="tileset_tile_picker" id="dlmu~*$IPZ/~{NxHTIqJ" disabled="true"><field name="tile">myTiles.tile14</field></shadow></value><next><block type="spritesetvel" id="PUP5JokDTvW_[a1V3CW:" disabled="true"><value name="sprite"><block type="variables_get" id="?=1}nw_gK(E9=5Y6B8!." disabled="true"><field name="VAR" id="vQXanCkCE`neTiW#cRY?">projectile2</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="qo%Bq{L|.?(5fc9az$|;" disabled="true"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="X+b/HgC+AkR#zCrr?Iu3" disabled="true"><field name="speed">50</field></shadow></value></block></next></block></next></block><block type="pxt_controls_for_of" id="yeN;LRjHCvUv(hD#MMNL" disabled="true" x="10" y="730"><value name="VAR"><shadow type="variables_get_reporter" id="8kl$v._q`D%psG1)-lA#" disabled="true"><field name="VAR" id=",*^g$@OkCr2*wJhbXIbo">value2</field></shadow></value><value name="LIST"><block type="mapgettilestype" id="23n2a27)@:-}IzQM::No" disabled="true"><value name="tile"><shadow type="tileset_tile_picker" id="0Kux84{2|i:NmyzlEAUS" disabled="true"><field name="tile">myTiles.tile14</field></shadow></value></block></value><statement name="DO"><block type="variables_set" id="h{})5s,Yho^}JzEc@!|2" disabled="true"><field name="VAR" id="=gG!b@_:a?)%mvbjgZU$">stormCloud</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="3~DiEfj?=CR7TT$ty{l6" disabled="true"><value name="img"><shadow type="screen_image_picker" id="c-cKhk7G#m:hVl(22d]O" disabled="true"><field name="img">img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -66,21 +66,38 @@
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-`</field></shadow></value><value name="kind"><shadow type="spritekind" id="vAvGiI0rv.Y}i(fHap/:"><field name="MEMBER">Wcan</field></shadow></value></block></value><next><block type="mapplaceontile" id="UP.Pg(LGqsSFrc}8JgqN"><value name="sprite"><shadow type="variables_get" id="S7RRs.}0fV^~#W+~R(0,"><field name="VAR" id="G8z:.SR@rUn*vJy6Tez9">wateringCan</field></shadow></value><value name="loc"><shadow type="mapgettile"/><block type="variables_get" id="WnWW3fOD}}=c0Ag:2^L-"><field name="VAR" id="[=Wocty/tr9QY#mq)noZ">value2</field></block></value><next><block type="mapsettileat" id="KBGk4Sf{PtWz|-KHqZc4"><value name="tile"><shadow type="tileset_tile_picker" id="$bQYa3wU$~_Bj*Tw_^eu"><field name="tile">myTiles.tile20</field></shadow></value><value name="loc"><shadow type="mapgettile"/><block type="variables_get" id="0YgHwpZG4IlU3Ao[G?B-"><field name="VAR" id="[=Wocty/tr9QY#mq)noZ">value2</field></block></value></block></next></block></next></block></statement></block></statement></block><block type="function_definition" id="nkn+?9zV8G0Ls@,Pfqv]" x="20" y="762"><mutation name="waterPlant" functionid="}]k[M/}3J?[N%haN3cm2"/><field name="function_name">waterPlant</field><statement name="STACK"><block type="controls_if" id="!0C*s;whTV9_SP:b-3H-"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="spriteoverlapswith" id="LpyvP9%k`DMZMygd_5ze"><value name="sprite"><block type="variables_get" id=")`IKP~).N[fMwnK-EceX"><field name="VAR" id="[.%cm6WpQ-D4w:S0xJ+p">mySprite</field></block></value><value name="other"><shadow type="variables_get" id="o=yNZzp00=2g#9$EzGN1"><field name="VAR" id="G8z:.SR@rUn*vJy6Tez9">wateringCan</field></shadow></value></block></value><statement name="DO0"><block type="variables_set" id="Ry8MrX8CqDqM7#J0uTU!"><field name="VAR" id="q/h_(oiD!1N*wqv!UX5!">waterDroplet</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreateprojectilefromsprite" id="yt{l,0Yvh87k?[+%EdO6"><value name="img"><shadow type="screen_image_picker" id="z$7gaO*`+edU[r8[UB!}"><field name="img">img`
-. . . . . . . 6 6 . . . . . . . 
-. . . . . . 9 9 9 9 . . . . . . 
-. . . . . 9 9 c c 9 9 . . . . . 
-. . . . . 9 c c 6 9 9 . . . . . 
-. . . . 9 9 9 c 6 6 9 9 . . . . 
-. . . 9 9 9 9 9 6 6 9 9 9 . . . 
-. . . 9 6 6 6 6 9 6 9 9 c . . . 
-. . c 6 6 6 9 9 9 6 9 c c c . . 
-. . c c c 9 6 9 9 9 6 6 6 c . . 
-. . 9 c 9 9 6 9 6 6 6 6 9 9 . . 
-. . 9 9 9 9 6 6 9 9 9 9 9 9 . . 
-. . 6 9 9 9 6 6 c 9 9 9 9 6 . . 
-. . . 6 9 9 9 6 c c 9 9 6 . . . 
-. . . 6 6 9 9 c c 9 9 6 6 . . . 
-. . . . . 6 9 9 9 9 6 . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="4!28/%I4_wva7~@fA/I[" disabled="true"><field name="MEMBER">Snow</field></shadow></value></block></value><next><block type="mapplaceontile" id="Hs79^kRFQ:7)frbqHJA!" disabled="true"><value name="sprite"><shadow type="variables_get" id="vnQ-4qZ?.+(C^l;,P|$0" disabled="true"><field name="VAR" id="=gG!b@_:a?)%mvbjgZU$">stormCloud</field></shadow></value><value name="loc"><shadow type="mapgettile"/><block type="variables_get" id="P+zC9Jt1?Rd_iW^]}94r" disabled="true"><field name="VAR" id=",*^g$@OkCr2*wJhbXIbo">value2</field></block></value><next><block type="mapsettileat" id="J?Laga0A[PXK;VJR*4GA" disabled="true"><value name="tile"><shadow type="tileset_tile_picker" id="C|BgolQuL;#n[c!jm*Cz" disabled="true"><field name="tile">myTiles.tile14</field></shadow></value><value name="loc"><shadow type="mapgettile"/><block type="variables_get" id="SxhKqAm*qSjr{N:]|HB%" disabled="true"><field name="VAR" id=",*^g$@OkCr2*wJhbXIbo">value2</field></block></value><next><block type="variables_set" id="ntkBt~(G-u3qao#u={qr" disabled="true"><field name="VAR" id="vQXanCkCE`neTiW#cRY?">projectile2</field><value name="VALUE"><shadow type="math_number" id="HU?wj+n9SZV)o5_KZs$D" disabled="true"><field name="NUM">0</field></shadow><block type="spritescreateprojectilefromsprite" id="=HL@QqcAdmyGl{)ONTKF" disabled="true"><value name="img"><shadow type="screen_image_picker" id=")W13c/={1LAllz3z][aI" disabled="true"><field name="img">img`
 . . . . . . . . . . . . . . . . 
-`</field></shadow></value><value name="sprite"><shadow type="variables_get" id="ow9tQp+S]$so)[jwgs6A"><field name="VAR" id="G8z:.SR@rUn*vJy6Tez9">wateringCan</field></shadow></value><value name="vx"><shadow type="spriteSpeedPicker" id="lTjk03(Q/Yrqd]rpw38."><field name="speed">-50</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="kv/vVF.g*zk{51%+KGom"><field name="speed">0</field></shadow></value></block></value></block></statement></block></statement></block></xml>
+. . . 1 . . . . . . . . . . 1 . 
+. . . . . . . . 1 1 . . . . . . 
+. 1 1 . . . . . 1 1 . . . . . . 
+. 1 1 . . . . . . . . . . . . . 
+. . . . d . 1 . . . . . . . . . 
+. . . . . . . . . . . d . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . 1 . . . . . . . . 1 . . 
+. . . . . . . . . 1 1 . . . . . 
+. . . . . . . . . 1 1 . . . . . 
+. d . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . 1 1 . . . . . . . . 
+. . . . . . 1 1 . . . . . . . . 
+. . . . . . . . . . . . . d . . 
+`</field></shadow></value><value name="sprite"><shadow type="variables_get" id="RLW:rTIK/4fAKfk=.FON" disabled="true"><field name="VAR" id="=gG!b@_:a?)%mvbjgZU$">stormCloud</field></shadow></value><value name="vx"><shadow type="spriteSpeedPicker" id="XkW|1Of_K`y=tN{Lw$u." disabled="true"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="V/Ihmd^`/_.xep)Yggzj" disabled="true"><field name="speed">50</field></shadow></value></block></value></block></next></block></next></block></next></block></statement></block><block type="function_definition" id="pKksanNAz493?9EC[V{]" x="810" y="1110"><mutation name="getWateringCan" functionid="yM~9#:DV@,$EnPv7d2l9"/><field name="function_name">getWateringCan</field><statement name="STACK"><block type="pxt_controls_for_of" id="$tn^9l[w~Ku+.pzZe$Ym"><value name="VAR"><shadow type="variables_get_reporter" id="@w!69:ZF3x/knJ/Oz=c)"><field name="VAR" id="2pvmSF`USV]RcHW11v4#">value22</field></shadow></value><value name="LIST"><block type="mapgettilestype" id="nQeg)w%#ptNn|ynM1Gs6"><value name="tile"><shadow type="tileset_tile_picker" id="UtAxYs6-7+)_1i]_N_bf"><field name="tile">myTiles.tile20</field></shadow></value></block></value><statement name="DO"><block type="variables_set" id="zISUiG]a7}qeFfbl=z`q"><field name="VAR" id="$g}2/mxi1/b^fQq;5-u4">wateringCan</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="8Tv1kIoz0szX}POBo`Q!"><value name="img"><shadow type="screen_image_picker" id=")iL41qtk:2SZ*rxnaJ{j"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="za~Chx!}d`+1v:/efoVG"><field name="MEMBER">Wcan</field></shadow></value></block></value><next><block type="mapplaceontile" id="bKvXap?Xzx~/wuu|RZN3"><value name="sprite"><shadow type="variables_get" id="5,%rRMLb!^*+-1Cn]0+7"><field name="VAR" id="$g}2/mxi1/b^fQq;5-u4">wateringCan</field></shadow></value><value name="loc"><shadow type="mapgettile"/><block type="variables_get" id="fFZd@oG`L0=^Eqz(j{m9"><field name="VAR" id="2pvmSF`USV]RcHW11v4#">value22</field></block></value><next><block type="mapsettileat" id="yDBKn-k4d$}xeS}am%}w"><value name="tile"><shadow type="tileset_tile_picker" id="k2n[I/cRGuA6Z$5TW/Ii"><field name="tile">myTiles.tile20</field></shadow></value><value name="loc"><shadow type="mapgettile"/><block type="variables_get" id="b_,guc$7*Z0ZU0;uRoa)"><field name="VAR" id="2pvmSF`USV]RcHW11v4#">value22</field></block></value></block></next></block></next></block></statement></block></statement></block></xml>

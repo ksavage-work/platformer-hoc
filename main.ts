@@ -4,28 +4,27 @@ namespace SpriteKind {
 }
 let projectile2: Sprite = null
 let wateringCan: Sprite = null
-let waterDroplet: Sprite = null
 // add to puzzle
 function snowing () {
     projectile2 = sprites.create(img`
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . 1 1 . . . . . . 1 1 . . . . 
-        . . 1 1 . . . . . . 1 1 . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . 1 1 . 
-        . . . . 1 1 . . . . . . . 1 1 . 
-        . . . . 1 1 . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . 1 1 . . . . . . . 
-        . . . . . . . 1 1 . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . . 1 . . . . . . . . . . 1 . 
+        . . . . . . . . 1 1 . . . . . . 
+        . 1 1 . . . . . 1 1 . . . . . . 
         . 1 1 . . . . . . . . . . . . . 
-        . 1 1 . . . . . . . . . . . . . 
+        . . . . d . 1 . . . . . . . . . 
+        . . . . . . . . . . . d . . . . 
         . . . . . . . . . . . . . . . . 
+        . . . . 1 . . . . . . . . 1 . . 
+        . . . . . . . . . 1 1 . . . . . 
+        . . . . . . . . . 1 1 . . . . . 
+        . d . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . 1 1 . . . . . . . . 
+        . . . . . . 1 1 . . . . . . . . 
+        . . . . . . . . . . . . . d . . 
         `, SpriteKind.Projectile)
-    tiles.placeOnTile(projectile2, tiles.getTileLocation(randint(2, 8), 1))
+    tiles.placeOnRandomTile(projectile2, myTiles.tile14)
     projectile2.setVelocity(0, 50)
 }
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -36,33 +35,13 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 // add to puzzle
 function pickLock () {
-    tiles.setWallAt(tiles.getTileLocation(6, 6), false)
-}
-function waterPlant () {
-    let mySprite: Sprite = null
-    if (mySprite.overlapsWith(wateringCan)) {
-        waterDroplet = sprites.createProjectileFromSprite(img`
-            . . . . . . . 6 6 . . . . . . . 
-            . . . . . . 9 9 9 9 . . . . . . 
-            . . . . . 9 9 c c 9 9 . . . . . 
-            . . . . . 9 c c 6 9 9 . . . . . 
-            . . . . 9 9 9 c 6 6 9 9 . . . . 
-            . . . 9 9 9 9 9 6 6 9 9 9 . . . 
-            . . . 9 6 6 6 6 9 6 9 9 c . . . 
-            . . c 6 6 6 9 9 9 6 9 c c c . . 
-            . . c c c 9 6 9 9 9 6 6 6 c . . 
-            . . 9 c 9 9 6 9 6 6 6 6 9 9 . . 
-            . . 9 9 9 9 6 6 9 9 9 9 9 9 . . 
-            . . 6 9 9 9 6 6 c 9 9 9 9 6 . . 
-            . . . 6 9 9 9 6 c c 9 9 6 . . . 
-            . . . 6 6 9 9 c c 9 9 6 6 . . . 
-            . . . . . 6 9 9 9 9 6 . . . . . 
-            . . . . . . . . . . . . . . . . 
-            `, wateringCan, -50, 0)
+    for (let value2 of tiles.getTilesByType(myTiles.tile10)) {
+        tiles.setWallAt(value2, false)
+        tiles.setTileAt(value2, myTiles.transparency16)
     }
 }
 function getWateringCan () {
-    for (let value2 of tiles.getTilesByType(myTiles.tile20)) {
+    for (let value22 of tiles.getTilesByType(myTiles.tile20)) {
         wateringCan = sprites.create(img`
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
@@ -81,7 +60,7 @@ function getWateringCan () {
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             `, SpriteKind.Wcan)
-        tiles.placeOnTile(wateringCan, value2)
-        tiles.setTileAt(value2, myTiles.tile20)
+        tiles.placeOnTile(wateringCan, value22)
+        tiles.setTileAt(value22, myTiles.tile20)
     }
 }

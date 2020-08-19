@@ -292,17 +292,28 @@ function setLevelTileMap (level: number) {
             2 2 2 2 2 2 2 2 2 2
         `, [myTiles.transparency16,myTiles.tile2,myTiles.tile3,myTiles.tile6,myTiles.tile1,myTiles.tile10,myTiles.tile5], TileScale.Sixteen))
     } else if (level == 1) {
-        tiles.setTilemap(tiles.createTilemap(hex`0a0008000000000000000000000000000404040404040400000000000000000000000000000000000000000000000000000000000000070005050505050505000702000000000000000107060303030303030306`, img`
+        tiles.setTilemap(tiles.createTilemap(hex`0a0008000000000000000000000000030303030303030300000000000000000000000000000000000000000000000004000400040000000004000400040004000200000000000000000105060606060606060605`, img`
             . . . . . . . . . .
             . . . . . . . . . .
             . . . . . . . . . .
             . . . . . . . . . .
             . . . . . . . . . .
-            2 . . . . . . . . .
-            2 . . . . . . . . .
-            2 2 . . . . . . . 2
-        `, [myTiles.transparency16,myTiles.tile1,myTiles.tile6,sprites.dungeon.hazardLava1,myTiles.tile14,myTiles.tile5,myTiles.tile13,myTiles.tile22], TileScale.Sixteen))
+            . . . . . . . . . .
+            . . . . . . . . . .
+            2 . . . . . . . . 2
+        `, [myTiles.transparency16,myTiles.tile1,myTiles.tile6,myTiles.tile14,myTiles.tile5,myTiles.tile13,sprites.dungeon.hazardLava1], TileScale.Sixteen))
     } else if (level == 2) {
+        tiles.setTilemap(tiles.createTilemap(hex`0a0008000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000000504060000000000000004040400000002000000000400000103030303030303030303`, img`
+            . . . . . . . . . .
+            . . . . . . . . . .
+            . . . . . . . . . .
+            . . . . . . . . . .
+            . . . . . . . . . .
+            . . . . . . . . . .
+            . . . . . . . . . .
+            2 2 2 2 2 2 2 2 2 2
+        `, [myTiles.transparency16,myTiles.tile1,myTiles.tile6,sprites.castle.tilePath5,myTiles.tile24,myTiles.tile25,myTiles.tile26], TileScale.Sixteen))
+    } else if (level == 3) {
         tiles.setTilemap(tiles.createTilemap(hex`0a0008000405050505050505000004050500000006020000040005000000000000000400020006000000000004000000000000000000040000000000000000000401000000070000060803030303030303030303`, img`
             2 2 2 2 2 2 2 2 . .
             2 2 2 . . . . . . .
@@ -313,17 +324,6 @@ function setLevelTileMap (level: number) {
             2 . . . . . . . . .
             2 2 2 2 2 2 2 2 2 2
         `, [myTiles.transparency16,myTiles.tile6,myTiles.tile12,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile7,myTiles.tile19,myTiles.tile20], TileScale.Sixteen))
-    } else if (level == 3) {
-        tiles.setTilemap(tiles.createTilemap(hex`2000080000000000000000000000000300000007000000070000070007000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000300000003000000000000000000000000000000000000000000000000000300030000000000000000000000000000000000000000000000000000000303030303030303030303030303030303030303030303030303030300000000030000050000050005000005000500000500050000000500000005000000060303010000040004000000040000000000040000000400000004000000030202020302020202020202020202020202020202020202020202020202020203`, img`
-            . . . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . . . 
-            . . . . . . . 2 . . . 2 . . . . . . . . . . . . . . . . . . . . 
-            . . . . . 2 . 2 . . . . . . . . . . . . . . . . . . . . . . . . 
-            . . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . 
-            . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-            . . 2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 
-            2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-            `, [myTiles.transparency16,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7], TileScale.Sixteen))
     } else if (level == 4) {
         tiles.setTilemap(tiles.createTilemap(hex`2000080000070700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005050500000000000000000000050005000000000005050000030303030003000000000000000000000000000000000000050505000000050305050505000300000000000000000000060003040404040404030404040404030404040404030000000000000100000202020302020202020203020202020203020202020203020202020202020202`, img`
             . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -337,15 +337,15 @@ function setLevelTileMap (level: number) {
             `, [myTiles.transparency16,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7], TileScale.Sixteen))
     } else if (level == 5) {
         tiles.setTilemap(tiles.createTilemap(hex`2000080000070700000000000000000000000000000000000707000000000000000000000000000000000000000000000505000000000000000000000000000000000000000000000000000000000000050300000000000000000000000000000000000000000000000000000005050003030000000000000000050505050000000000000000000000050005000303000005050000030303030000000000000000000003030000000003000300050505000000050300000000000000000000000000000303060003000305030400030400000003030004000004000004000000000100030302020302030203020203020202020303020202020202020202020202020203`, img`
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . 2 2 . . . . . . . . . . . . . . . . . . 
-            . . . . . . . . . 2 2 . . . . . . 2 2 2 2 . . . . . . . . . . 2 
-            2 . . . . 2 . 2 . . . . . . . . 2 . . . . . . . . . . . . . . 2 
-            2 . . 2 . 2 . 2 . . 2 . . . . 2 2 . . . . . . . . . . . . . . 2 
-            2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-            `, [myTiles.transparency16,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7], TileScale.Sixteen))
+            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . 2 . . . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . 2 2 . . . . . . . . . . . . . . . . . .
+            . . . . . . . . . 2 2 . . . . . . 2 2 2 2 . . . . . . . . . . 2
+            2 . . . . 2 . 2 . . . . . . . . 2 . . . . . . . . . . . . . . 2
+            2 . . 2 . 2 . 2 . . 2 . . . . 2 2 . . . . . . . . . . . . . . 2
+            2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+        `, [myTiles.transparency16,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7], TileScale.Sixteen))
     }
     initializeLevel(level)
 }
@@ -759,6 +759,12 @@ function clearGame () {
     for (let value4 of sprites.allOfKind(SpriteKind.Flier)) {
         value4.destroy()
     }
+    for (let value5 of sprites.allOfKind(SpriteKind.Ice)) {
+        value5.destroy()
+    }
+    for (let value6 of sprites.allOfKind(SpriteKind.Lava)) {
+        value6.destroy()
+    }
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Flier, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
@@ -822,7 +828,7 @@ function createEnemies () {
         animation.attachAnimation(flier, flierFlying)
         animation.attachAnimation(flier, flierIdle)
     }
-    // lava that burns player
+    //lava that burns player
     for (let value7 of tiles.getTilesByType(sprites.dungeon.hazardLava1)) {
         lava = sprites.create(sprites.dungeon.hazardLava1, SpriteKind.Lava)
         tiles.placeOnTile(lava, value7)
@@ -903,33 +909,36 @@ function spawnGoals () {
         tiles.setTileAt(value7, myTiles.transparency16)
     }
 }
+
+scene.onOverlapTile(SpriteKind.Projectile, sprites.dungeon.hazardLava1, function(sprite, location) {
+    tiles.setWallAt(location, true)
+    sprite.destroy()
+})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Lava, function (sprite, otherSprite) {
     sprite.startEffect(effects.blizzard, 1000)
+    otherSprite.setKind(SpriteKind.Ice)
+    otherSprite.setImage(img`
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+        1 9 9 9 9 9 1 1 1 1 1 1 1 9 9 1
+        1 9 9 9 9 1 1 1 1 1 1 1 1 1 9 1
+        1 9 9 9 1 1 1 1 1 1 1 1 1 1 1 1
+        1 9 9 1 1 1 1 1 1 1 1 1 1 1 1 1
+        1 9 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+        1 1 1 1 1 1 1 1 1 1 9 1 1 1 1 1
+        1 1 1 9 1 1 1 1 1 9 9 1 1 9 1 1
+        1 1 9 1 1 1 1 9 9 9 9 1 1 1 1 1
+        1 1 1 1 1 1 1 9 9 1 1 1 1 1 1 1
+        1 1 1 1 1 1 1 9 1 1 1 1 1 1 1 1
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+        1 1 1 1 1 1 1 1 1 9 1 1 1 1 9 1
+        1 9 1 1 1 1 1 1 9 1 1 1 1 9 9 1
+        1 9 9 1 1 1 1 1 1 1 1 1 9 9 9 1
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+    `)
     sprite.destroy()
-    otherSprite.destroy()
-    for (let index = 0; index <= 6; index++) {
-            tiles.setTileAt(tiles.getTileLocation(index + 2, 7), img`
-                1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-                1 9 9 9 9 1 1 1 1 1 1 1 1 9 9 1
-                1 9 9 9 1 1 1 1 1 1 1 1 1 1 9 1
-                1 9 9 1 1 1 1 1 1 1 1 9 1 1 1 1
-                1 9 1 1 1 1 1 1 1 1 9 9 1 1 1 1
-                1 1 1 1 1 1 1 1 1 9 9 1 1 1 1 1
-                1 1 1 1 1 1 1 1 9 9 9 1 1 1 1 1
-                1 1 1 1 9 1 1 1 9 1 1 1 1 1 1 1
-                1 1 1 9 1 1 1 1 1 1 1 1 1 9 1 1
-                1 1 1 1 1 1 1 1 1 1 1 1 9 1 1 1
-                1 1 1 1 1 1 1 1 9 1 1 1 1 1 1 1
-                1 1 1 1 1 1 1 9 9 1 1 1 1 1 1 1
-                1 1 1 1 1 1 9 9 9 1 1 1 1 1 9 1
-                1 9 1 1 1 1 1 1 1 1 1 1 1 9 9 1
-                1 9 9 1 1 1 1 1 1 1 1 1 9 9 9 1
-                1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-            `)
-            tiles.setWallAt(tiles.getTileLocation(index + 2, 7), true)
-        }
 })
 
+    
 let heroFacingLeft = false
 let coin: Sprite = null
 let playerStartLocation: tiles.Location = null
